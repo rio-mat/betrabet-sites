@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Betrabet Rehber - Giris, Kayit, Bonus ve Guvenlik Kilavuzu 2024</title>
+<meta name="description" content="Betrabet hakkinda bilmeniz gereken her sey. Adim adim giris, kayit, bonus ve guvenlik rehberi."/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="config.js"></script>
+<script>
+tailwind.config = {
+  theme: { extend: { colors: { brand: '#059669', dark: '#0a0f0d', card: '#111a16', border: '#1a2e24', accent: '#fbbf24' } } }
+};
+</script>
+<style>
+body { background: #0a0f0d; font-family: 'Georgia', 'Segoe UI', serif; }
+h1,h2,h3,nav,header,footer,.btn { font-family: 'Segoe UI', system-ui, sans-serif; }
+.prose { line-height: 1.85; }
+</style>
+</head>
+<body class="text-gray-300 min-h-screen">
+
+<header class="bg-dark/95 backdrop-blur border-b border-border sticky top-0 z-50">
+  <div class="max-w-3xl mx-auto flex items-center justify-between px-4 py-3">
+    <a href="#" class="flex items-center gap-2">
+      <div class="w-8 h-8 rounded-full bg-brand flex items-center justify-center font-black text-white text-sm">B</div>
+      <span class="font-bold text-white text-sm">Betrabet <span class="text-brand">Rehber</span></span>
+    </a>
+    <div class="flex gap-2">
+      <a onclick="window.open(LOGIN)" class="cursor-pointer btn px-3 py-1.5 rounded-lg border border-brand text-brand text-xs font-semibold hover:bg-brand/10 transition">Giris</a>
+      <a onclick="window.open(REGISTER)" class="cursor-pointer btn px-3 py-1.5 rounded-lg bg-brand text-white text-xs font-bold hover:bg-emerald-600 transition">Uye Ol</a>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-3xl mx-auto px-4 py-10">
+
+  <article>
+    <div class="mb-8">
+      <div class="flex items-center gap-3 text-xs text-gray-500 mb-3">
+        <span>Yazar: Betrabet Editoru</span>
+        <span>&bull;</span>
+        <span>Mart 2024</span>
+        <span>&bull;</span>
+        <span>8 dk okuma</span>
+      </div>
+      <h1 class="text-3xl md:text-4xl font-black text-white leading-tight mb-4" style="font-family:'Segoe UI',system-ui,sans-serif">
+        Betrabet: Kapsamli Kullanim Rehberi 2024
+      </h1>
+      <p class="prose text-gray-400 text-sm">
+        Bu rehberde Betrabet hakkinda bilmeniz gereken her seyi bulacaksiniz. Guncel giris adresinden 
+        bonus sistemine, guvenlik onlemlerinden mobil erisime kadar tum detaylari adim adim anlattik.
+      </p>
+    </div>
+
+    <nav class="bg-card border border-border rounded-xl p-5 mb-10">
+      <h3 class="font-bold text-white text-sm mb-3" style="font-family:'Segoe UI',system-ui,sans-serif">Icindekiler</h3>
+      <ol class="space-y-1.5 text-sm list-decimal list-inside">
+        <li><a href="#nedir" class="text-brand hover:underline">Betrabet Nedir?</a></li>
+        <li><a href="#adres" class="text-brand hover:underline">Guncel Giris Adresi</a></li>
+        <li><a href="#giris" class="text-brand hover:underline">Giris Nasil Yapilir?</a></li>
+        <li><a href="#kayit" class="text-brand hover:underline">Kayit Adim Adim</a></li>
+        <li><a href="#mobil" class="text-brand hover:underline">Mobil Erisim</a></li>
+        <li><a href="#guvenlik" class="text-brand hover:underline">Guvenlik Onlemleri</a></li>
+        <li><a href="#bonus" class="text-brand hover:underline">Bonus Sistemi</a></li>
+        <li><a href="#sss" class="text-brand hover:underline">Sikca Sorulan Sorular</a></li>
+      </ol>
+    </nav>
+
+    <section id="nedir" class="mb-10">
+      <h2 class="text-xl font-black text-white mb-4 pb-2 border-b border-border">1. Betrabet Nedir?</h2>
+      <div class="prose text-sm text-gray-400 space-y-3">
+        <p>
+          Betrabet, 2020 yilindan bu yana hizmet veren, Curacao lisansli uluslararasi bir online bahis 
+          ve casino platformudur. Turkiye'deki bahis severler arasinda hizla popülerlik kazanmis, 
+          guvenilir altyapisi ve genis oyun yelpazesi ile one cikmistir.
+        </p>
+        <p>
+          20'den fazla spor dalinda bahis imkani, 2500+ casino oyunu, canli krupiyerler esliginde 
+          casino deneyimi ve 7 farkli poker agi ile kullanicilarina kapsamli bir platform sunmaktadir.
+        </p>
+      </div>
+    </section>
+
+    <section id="adres" class="mb-10">
+      <h2 class="text-xl font-black text-white mb-4 pb-2 border-b border-border">2. Guncel Giris Adresi</h2>
+      <div class="prose text-sm text-gray-400 space-y-3">
+        <p>
+          Betrabet, BTK tarafindan uygulanan erisim engellemeleri nedeniyle belirli araliklarla 
+          domain adresini degistirmektedir. Bu tamamen normal bir durumdur ve tum uluslararasi 
+          bahis siteleri icin gecerlidir.
+        </p>
+        <div class="bg-brand/10 border border-brand/30 rounded-xl p-4 not-prose">
+          <div class="flex items-center justify-between">
+            <div>
+              <div class="text-xs text-brand font-bold mb-1">GUNCEL ADRES</div>
+              <div class="text-white font-bold" style="font-family:'Segoe UI',system-ui,sans-serif" id="currentDomain"></div>
+            </div>
+            <div class="flex gap-2">
+              <a onclick="window.open(LOGIN)" class="cursor-pointer btn px-4 py-2 rounded-lg bg-brand text-white text-xs font-bold hover:bg-emerald-600 transition">Giris Yap</a>
+            </div>
+          </div>
+        </div>
+        <p>
+          Bu sayfa, adres degistikce otomatik olarak guncellenmektedir. Yer imlerinize ekleyerek 
+          her zaman guncel adrese ulasabilirsiniz.
+        </p>
+      </div>
+    </section>
+
+    <section id="giris" class="mb-10">
+      <h2 class="text-xl font-black text-white mb-4 pb-2 border-b border-border">3. Giris Nasil Yapilir?</h2>
+      <div class="prose text-sm text-gray-400 space-y-3">
+        <p>Betrabet'e giris yapmak oldukca basittir. Asagidaki adimlari takip edin:</p>
+        <div class="overflow-x-auto not-prose">
+          <table class="w-full text-xs border-collapse">
+            <thead>
+              <tr class="border-b border-border">
+                <th class="text-left py-2 px-3 text-brand font-bold">Adim</th>
+                <th class="text-left py-2 px-3 text-brand font-bold">Aciklama</th>
+                <th class="text-left py-2 px-3 text-brand font-bold">Onem</th>
+              </tr>
+            </thead>
+            <tbody class="text-gray-400">
+              <tr class="border-b border-border/50">
+                <td class="py-2 px-3 text-white font-semibold">1. Adrese Git</td>
+                <td class="py-2 px-3">Guncel giris adresine tiklayin</td>
+                <td class="py-2 px-3"><span class="text-red-400">Kritik</span></td>
+              </tr>
+              <tr class="border-b border-border/50">
+                <td class="py-2 px-3 text-white font-semibold">2. Bilgileri Gir</td>
+                <td class="py-2 px-3">Kullanici adi ve sifrenizi yazin</td>
+                <td class="py-2 px-3"><span class="text-accent">Yuksek</span></td>
+              </tr>
+              <tr class="border-b border-border/50">
+                <td class="py-2 px-3 text-white font-semibold">3. Giris Yap</td>
+                <td class="py-2 px-3">"Giris" butonuna basin</td>
+                <td class="py-2 px-3"><span class="text-green-400">Normal</span></td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 text-white font-semibold">4. Dogrulama</td>
+                <td class="py-2 px-3">Gerekirse SMS dogrulamasi yapin</td>
+                <td class="py-2 px-3"><span class="text-accent">Yuksek</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          Sifrenizi unuttuysaniz, giris sayfasindaki "Sifremi Unuttum" linkine tiklayarak 
+          e-posta adresiniz uzerinden sifre sifirlama islemi yapabilirsiniz.
+        </p>
+      </div>
+    </section>
+
+    <section id="kayit" class="mb-10">
+      <h2 class="text-xl font-black text-white mb-4 pb-2 border-b border-border">4. Kayit Adim Adim</h2>
+      <div class="prose text-sm text-gray-400 space-y-3">
+        <p>Betrabet'e uye olmak icin asagidaki adimlari izleyin:</p>
+        <div class="not-prose space-y-3">
+          <div class="bg-card border border-border rounded-lg p-4 flex gap-3 items-start">
+            <span class="w-6 h-6 rounded-full bg-brand text-white flex items-center justify-center text-xs font-bold shrink-0">1</span>
+            <div>
+              <div class="text-white font-semibold text-sm mb-0.5">Kayit Sayfasina Gidin</div>
+              <div class="text-xs text-gray-500">Asagidaki "Uye Ol" butonuna tiklayarak kayit formuna erisin.</div>
+            </div>
+          </div>
+          <div class="bg-card border border-border rounded-lg p-4 flex gap-3 items-start">
+            <span class="w-6 h-6 rounded-full bg-brand text-white flex items-center justify-center text-xs font-bold shrink-0">2</span>
+            <div>
+              <div class="text-white font-semibold text-sm mb-0.5">Formu Doldurun</div>
+              <div class="text-xs text-gray-500">Ad, soyad, dogum tarihi, e-posta, telefon ve guvenli bir sifre belirleyin.</div>
+            </div>
+          </div>
+          <div class="bg-card border border-border rounded-lg p-4 flex gap-3 items-start">
+            <span class="w-6 h-6 rounded-full bg-brand text-white flex items-center justify-center text-xs font-bold shrink-0">3</span>
+            <div>
+              <div class="text-white font-semibold text-sm mb-0.5">Hesabi Dogrulayin</div>
+              <div class="text-xs text-gray-500">Telefonunuza gelen SMS kodunu girerek hesabinizi aktif edin.</div>
+            </div>
+          </div>
+          <div class="bg-card border border-border rounded-lg p-4 flex gap-3 items-start">
+            <span class="w-6 h-6 rounded-full bg-accent text-black flex items-center justify-center text-xs font-bold shrink-0">&#10003;</span>
+            <div>
+              <div class="text-white font-semibold text-sm mb-0.5">Bonusunuzu Alin!</div>
+              <div class="text-xs text-gray-500">Ilk para yatirmanizda %100 hos geldin bonusu otomatik olarak tanimlanir.</div>
+            </div>
+          </div>
+        </div>
+        <div class="not-prose text-center mt-4">
+          <a onclick="window.open(REGISTER)" class="cursor-pointer btn inline-block px-8 py-3 rounded-xl bg-brand text-white font-bold hover:bg-emerald-600 transition">Hemen Uye Ol</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="mobil" class="mb-10">
+      <h2 class="text-xl font-black text-white mb-4 pb-2 border-b border-border">5. Mobil Erisim</h2>
+      <div class="prose text-sm text-gray-400 space-y-3">
+        <p>
+          Betrabet, tam responsive tasarimi ile tum mobil cihazlarda sorunsuz calisir. 
+          Ayrica bir uygulama indirmenize gerek yoktur - mobil tarayicinizdan dogrudan erisebilirsiniz.
+        </p>
+        <div class="not-prose grid grid-cols-3 gap-3">
+          <div class="bg-card border border-border rounded-lg p-3 text-center">
+            <div class="text-lg mb-1">&#128241;</div>
+            <div class="text-xs font-semibold text-white">Android</div>
+            <div class="text-[10px] text-gray-600">Chrome / Firefox</div>
+          </div>
+          <div class="bg-card border border-border rounded-lg p-3 text-center">
+            <div class="text-lg mb-1">&#127822;</div>
+            <div class="text-xs font-semibold text-white">iOS</div>
+            <div class="text-[10px] text-gray-600">Safari / Chrome</div>
+          </div>
+          <div class="bg-card border border-border rounded-lg p-3 text-center">
+            <div class="text-lg mb-1">&#128187;</div>
+            <div class="text-xs font-semibold text-white">Tablet</div>
+            <div class="text-[10px] text-gray-600">Tum tarayicilar</div>
+          </div>
+        </div>
+        <p>
+          Mobil tarayicinizdan ana ekrana ekle secenegini kullanarak uygulama benzeri 
+          bir deneyim elde edebilirsiniz.
+        </p>
+      </div>
+    </section>
+
+    <section id="guvenlik" class="mb-10">
+      <h2 class="text-xl font-black text-white mb-4 pb-2 border-b border-border">6. Guvenlik Onlemleri</h2>
+      <div class="prose text-sm text-gray-400 space-y-3">
+        <p>Betrabet, kullanici guvenligini en ust duzeyde tutmak icin cesitli onlemler almaktadir:</p>
+        <div class="not-prose">
+          <ul class="space-y-2 text-xs">
+            <li class="flex items-start gap-2 bg-card border border-border rounded-lg p-3">
+              <span class="text-brand font-bold shrink-0">&#128274;</span>
+              <div><span class="text-white font-semibold">256-bit SSL Sifreleme</span> - Tum veri transferleri sifrelenmektedir.</div>
+            </li>
+            <li class="flex items-start gap-2 bg-card border border-border rounded-lg p-3">
+              <span class="text-brand font-bold shrink-0">&#128737;</span>
+              <div><span class="text-white font-semibold">Curacao Lisansi</span> - Uluslararasi denetim altinda faaliyet gosterir.</div>
+            </li>
+            <li class="flex items-start gap-2 bg-card border border-border rounded-lg p-3">
+              <span class="text-brand font-bold shrink-0">&#128272;</span>
+              <div><span class="text-white font-semibold">2FA Dogrulama</span> - Iki adimli dogrulama ile hesabinizi koruyun.</div>
+            </li>
+            <li class="flex items-start gap-2 bg-card border border-border rounded-lg p-3">
+              <span class="text-brand font-bold shrink-0">&#9989;</span>
+              <div><span class="text-white font-semibold">Adil Oyun</span> - Bagimsiz denetim kuruluslari tarafindan onaylanmistir.</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="bonus" class="mb-10">
+      <h2 class="text-xl font-black text-white mb-4 pb-2 border-b border-border">7. Bonus Sistemi</h2>
+      <div class="prose text-sm text-gray-400 space-y-3">
+        <p>Betrabet, cesitli bonus ve promosyonlar ile kullanicilarina ek kazanc firsati sunmaktadir:</p>
+        <div class="not-prose space-y-2">
+          <div class="bg-card border border-border rounded-lg p-4">
+            <div class="flex items-center gap-3">
+              <span class="text-2xl font-black text-brand" style="font-family:'Segoe UI',system-ui,sans-serif">%100</span>
+              <div>
+                <div class="text-white font-semibold text-sm">Spor Hos Geldin Bonusu</div>
+                <div class="text-[11px] text-gray-500">Ilk yatirimda gecerli. Maksimum 2000 TL. 5x cevrim sarti.</div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-card border border-border rounded-lg p-4">
+            <div class="flex items-center gap-3">
+              <span class="text-2xl font-black text-brand" style="font-family:'Segoe UI',system-ui,sans-serif">%50</span>
+              <div>
+                <div class="text-white font-semibold text-sm">Casino Yatirim Bonusu</div>
+                <div class="text-[11px] text-gray-500">Her yatirimda gecerli. Slot oyunlarinda kullanilabilir.</div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-card border border-border rounded-lg p-4">
+            <div class="flex items-center gap-3">
+              <span class="text-2xl font-black text-brand" style="font-family:'Segoe UI',system-ui,sans-serif">%15</span>
+              <div>
+                <div class="text-white font-semibold text-sm">Haftalik Kayip Bonusu</div>
+                <div class="text-[11px] text-gray-500">Her pazartesi hesabiniza otomatik tanimlanir.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="not-prose bg-brand/10 border border-brand/30 rounded-xl p-5 mt-4">
+          <h3 class="text-white font-bold text-sm mb-3" style="font-family:'Segoe UI',system-ui,sans-serif">Bonus Hesaplayici</h3>
+          <div class="flex gap-3 items-end">
+            <div class="flex-1">
+              <label class="text-xs text-gray-500 block mb-1">Yatirim Tutari (TL)</label>
+              <input type="number" id="bonusInput" value="1000" min="50" max="10000" class="w-full bg-dark border border-border rounded-lg px-3 py-2 text-white text-sm outline-none focus:border-brand transition" />
+            </div>
+            <button onclick="calcBonus()" class="btn px-5 py-2 rounded-lg bg-brand text-white text-sm font-bold hover:bg-emerald-600 transition">Hesapla</button>
+          </div>
+          <div id="bonusResult" class="mt-3 text-sm"></div>
+        </div>
+
+        <div class="not-prose text-center mt-4">
+          <a onclick="window.open(REGISTER)" class="cursor-pointer btn inline-block px-8 py-3 rounded-xl bg-brand text-white font-bold hover:bg-emerald-600 transition">Bonusu Almak Icin Uye Ol</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="sss" class="mb-10">
+      <h2 class="text-xl font-black text-white mb-4 pb-2 border-b border-border">8. Sikca Sorulan Sorular</h2>
+      <div class="space-y-2" id="faq"></div>
+    </section>
+
+    <section class="bg-brand/10 border border-brand/30 rounded-2xl p-8 text-center mb-6">
+      <h2 class="text-xl font-black text-white mb-2" style="font-family:'Segoe UI',system-ui,sans-serif">Hazir misiniz?</h2>
+      <p class="text-sm text-gray-400 mb-5">Betrabet'e hemen uye olun, %100 hos geldin bonusunuzu kaptin.</p>
+      <div class="flex justify-center gap-3">
+        <a onclick="window.open(LOGIN)" class="cursor-pointer btn px-6 py-2.5 rounded-lg border border-brand text-brand text-sm font-semibold hover:bg-brand/10 transition">Giris Yap</a>
+        <a onclick="window.open(REGISTER)" class="cursor-pointer btn px-6 py-2.5 rounded-lg bg-brand text-white text-sm font-bold hover:bg-emerald-600 transition">Uye Ol</a>
+      </div>
+    </section>
+
+    <div class="bg-red-500/10 border border-red-500/20 rounded-xl p-4 text-center text-xs text-red-300">
+      18+ Kumar bagimlilik yapabilir. Sorumlu oynayin. Lisans: Curacao eGaming - OGL/2024/1248/0716
+    </div>
+
+  </article>
+</main>
+
+<footer class="border-t border-border mt-8 py-6 text-center text-xs text-gray-600">
+  <p>&copy; 2024 Betrabet Rehber. Tum haklari saklidir.</p>
+</footer>
+
+<script>
+document.getElementById('currentDomain').textContent = DOMAIN;
+
+function calcBonus() {
+  const val = parseInt(document.getElementById('bonusInput').value) || 0;
+  const bonus = Math.min(val, 2000);
+  const total = val + bonus;
+  document.getElementById('bonusResult').innerHTML = `
+    <div class="bg-dark border border-border rounded-lg p-3 flex justify-between text-xs">
+      <span class="text-gray-500">Yatirim: <span class="text-white font-bold">${val} TL</span></span>
+      <span class="text-gray-500">Bonus: <span class="text-brand font-bold">${bonus} TL</span></span>
+      <span class="text-gray-500">Toplam: <span class="text-accent font-bold">${total} TL</span></span>
+    </div>`;
+}
+
+const faqs = [
+  { q: "Betrabet guvenilir mi?", a: "Evet, Curacao lisansi altinda faaliyet gostermektedir. SSL sifreleme ve adil oyun sertifikasina sahiptir." },
+  { q: "Minimum yatirim tutari nedir?", a: "Minimum yatirim tutari odeme yontemine gore degisir, genellikle 50 TL'dir." },
+  { q: "Cekim ne kadar surer?", a: "Papara ile 5-15 dakika, banka havalesi ile 15-30 dakika arasinda tamamlanir." },
+  { q: "Bonus cevrim sarti nedir?", a: "Spor bonusunda 5x, casino bonusunda 15x cevrim sarti uygulanir." },
+  { q: "Canli destek nasil ulasirim?", a: "Siteye giris yaptiktan sonra sag alt kosedeki chat simgesine tiklayarak 7/24 canli destek alabilirsiniz." },
+  { q: "Birden fazla hesap acabilir miyim?", a: "Hayir, her kullanici yalnizca bir hesap acabilir. Birden fazla hesap tespit edilirse hesaplar kapatilir." }
+];
+const faqEl = document.getElementById('faq');
+faqs.forEach(f => {
+  faqEl.innerHTML += `
+    <details class="bg-card border border-border rounded-lg group">
+      <summary class="px-4 py-3 cursor-pointer flex items-center justify-between text-sm font-semibold hover:text-brand transition" style="font-family:'Segoe UI',system-ui,sans-serif">
+        ${f.q}
+        <svg class="w-4 h-4 shrink-0 text-brand transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </summary>
+      <div class="px-4 pb-3 text-xs text-gray-400 leading-relaxed">${f.a}</div>
+    </details>`;
+});
+</script>
+</body>
+</html>

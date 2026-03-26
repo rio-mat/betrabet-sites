@@ -1,0 +1,8 @@
+{
+  "name": "betrabet-sites",
+  "version": "1.0.0",
+  "description": "Betrabet landing pages",
+  "scripts": {
+    "build": "echo 'Static sites - no build needed'"
+  }
+}
