@@ -1,12 +1,10 @@
-// BETRABET MERKEZI KONFIGURASYON
-// Tum siteler bu dosyayi GitHub uzerinden yukler.
-// Sadece "num" degerini degistirip commit+push yapin, tum siteler guncellenir.
+// BETRAKING MERKEZI KONFIGURASYON
+// Tum siteler bu dosyayi yukler.
+// Domain degistirmek icin asagidaki "domain" degerini guncelleyin.
 
 const SITE_CONFIG = {
-  base: "betrabet",
-  num: 366,
+  domain: "https://betraking.com",
 
-  get domain()   { return `https://${this.base}${this.num}.com`; },
   get login()    { return `${this.domain}/login`; },
   get register() { return `${this.domain}/register`; },
 };
