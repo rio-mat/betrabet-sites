@@ -25,11 +25,11 @@
 <script src="config.js"></script>
 <script>
 tailwind.config = {
-  theme: { extend: { colors: { brand: '#dc2626', dark: '#111111', card: '#1a1a1a', border: '#2a2a2a', accent: '#f59e0b' } } }
+  theme: { extend: { colors: { brand: '#d4af37', dark: '#0b0b0b', card: '#151515', border: '#222222', accent: '#b8942e' } } }
 };
 </script>
 <style>
-body { background: #111111; font-family: 'Segoe UI', system-ui, sans-serif; }
+body { background: #0b0b0b; font-family: 'Segoe UI', system-ui, sans-serif; }
 </style>
 </head>
 <body class="text-gray-300 min-h-screen">
@@ -37,7 +37,7 @@ body { background: #111111; font-family: 'Segoe UI', system-ui, sans-serif; }
 <header class="bg-dark border-b border-border sticky top-0 z-50">
   <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
     <a href="#" class="flex items-center gap-2">
-      <div class="w-8 h-8 rounded bg-brand flex items-center justify-center font-black text-white text-sm">B</div>
+      <div class="w-8 h-8 rounded bg-gradient-to-br from-brand to-amber-600 flex items-center justify-center font-black text-black text-sm">B</div>
       <div>
         <span class="font-bold text-white text-sm">Betraking</span>
         <span class="text-[10px] text-gray-500 block -mt-1">GUNCEL GIRIS</span>
@@ -49,7 +49,7 @@ body { background: #111111; font-family: 'Segoe UI', system-ui, sans-serif; }
       <a href="#kampanya" class="text-gray-400 hover:text-white transition">Kampanyalar</a>
       <a href="#giris" class="text-gray-400 hover:text-white transition">Betraking Giris</a>
     </nav>
-    <a onclick="window.open(LOGIN)" class="cursor-pointer px-4 py-1.5 rounded bg-brand text-white text-xs font-bold hover:bg-red-700 transition">GIRIS YAP</a>
+    <a onclick="window.open(LOGIN)" class="cursor-pointer px-4 py-1.5 rounded bg-brand text-black text-xs font-bold hover:bg-amber-600 transition">GIRIS YAP</a>
   </div>
 </header>
 
@@ -61,11 +61,11 @@ body { background: #111111; font-family: 'Segoe UI', system-ui, sans-serif; }
 
       <section class="bg-card border border-border rounded-xl overflow-hidden">
         <div class="bg-gradient-to-r from-brand/20 to-accent/10 p-6 md:p-8">
-          <span class="px-2 py-0.5 rounded bg-brand text-white text-[10px] font-bold uppercase">Guncel</span>
+          <span class="px-2 py-0.5 rounded bg-brand text-black text-[10px] font-bold uppercase">Guncel</span>
           <h1 class="text-2xl md:text-3xl font-black text-white mt-3 mb-2">Betraking Guncel Giris Adresi</h1>
           <p class="text-sm text-gray-400 mb-4">Betraking'in yeni giris adresi aktif! Hemen tiklayin ve bahis heyecanina katilin.</p>
           <div class="flex gap-3">
-            <a onclick="window.open(LOGIN)" class="cursor-pointer px-6 py-2.5 rounded-lg bg-brand text-white text-sm font-bold hover:bg-red-700 transition">Giris Yap</a>
+            <a onclick="window.open(LOGIN)" class="cursor-pointer px-6 py-2.5 rounded-lg bg-brand text-black text-sm font-bold hover:bg-amber-600 transition">Giris Yap</a>
             <a onclick="window.open(REGISTER)" class="cursor-pointer px-6 py-2.5 rounded-lg bg-accent text-black text-sm font-bold hover:bg-yellow-500 transition">Uye Ol</a>
           </div>
         </div>
@@ -139,17 +139,17 @@ body { background: #111111; font-family: 'Segoe UI', system-ui, sans-serif; }
           Betraking, Curacao lisansi ile faaliyet gostermekte olup SSL sertifikasi ile tum islemleriniz 
           sifrelenmektedir. 7/24 canli destek hatti ile her turlu sorunuzda yardim alabilirsiniz.
         </p>
-        <a onclick="window.open(LOGIN)" class="cursor-pointer inline-block px-6 py-2.5 rounded-lg bg-brand text-white text-sm font-bold hover:bg-red-700 transition">Guncel Adrese Git</a>
+        <a onclick="window.open(LOGIN)" class="cursor-pointer inline-block px-6 py-2.5 rounded-lg bg-brand text-black text-sm font-bold hover:bg-amber-600 transition">Guncel Adrese Git</a>
       </section>
     </div>
 
     <aside class="space-y-4">
       <div class="bg-card border border-border rounded-xl p-5 text-center">
         <div class="text-xs text-gray-500 mb-2 uppercase font-bold">Onerilen Site</div>
-        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-brand to-red-400 flex items-center justify-center font-black text-white text-2xl mx-auto mb-3">B</div>
+        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-brand to-amber-600 flex items-center justify-center font-black text-white text-2xl mx-auto mb-3">B</div>
         <div class="font-bold text-white mb-1">Betraking</div>
         <div class="text-xs text-accent font-bold mb-3">%100 Hos Geldin Bonusu</div>
-        <a onclick="window.open(REGISTER)" class="cursor-pointer block w-full py-2.5 rounded-lg bg-brand text-white text-xs font-bold hover:bg-red-700 transition">TIKLA - UYE OL</a>
+        <a onclick="window.open(REGISTER)" class="cursor-pointer block w-full py-2.5 rounded-lg bg-brand text-black text-xs font-bold hover:bg-amber-600 transition">TIKLA - UYE OL</a>
       </div>
 
       <div class="bg-card border border-border rounded-xl p-5">

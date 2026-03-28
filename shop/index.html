@@ -28,12 +28,12 @@
 <script src="config.js"></script>
 <script>
 tailwind.config = {
-  theme: { extend: { colors: { brand: '#f59e0b', dark: '#0b0e18', card: '#141828', border: '#1e2340' } } }
+  theme: { extend: { colors: { brand: '#d4af37', dark: '#0a0a0a', card: '#141414', border: '#252525' } } }
 };
 </script>
 <style>
-body { background: #0b0e18; font-family: 'Segoe UI', system-ui, sans-serif; }
-.glow { box-shadow: 0 0 24px rgba(245,158,11,0.25); }
+body { background: #0a0a0a; font-family: 'Segoe UI', system-ui, sans-serif; }
+.glow { box-shadow: 0 0 24px rgba(212,175,55,0.3); }
 </style>
 </head>
 <body class="text-gray-200 min-h-screen">
@@ -41,7 +41,7 @@ body { background: #0b0e18; font-family: 'Segoe UI', system-ui, sans-serif; }
 <header class="sticky top-0 z-50 bg-dark/95 backdrop-blur border-b border-border">
   <div class="max-w-2xl mx-auto flex items-center justify-between px-4 py-3">
     <a href="#" class="flex items-center gap-2">
-      <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-brand to-yellow-300 flex items-center justify-center font-black text-black">B</div>
+      <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-brand to-amber-300 flex items-center justify-center font-black text-black">B</div>
       <span class="font-bold text-lg"><span class="text-brand">BETRA</span><span class="text-white">KING</span></span>
     </a>
     <div class="flex gap-2">
@@ -107,7 +107,7 @@ body { background: #0b0e18; font-family: 'Segoe UI', system-ui, sans-serif; }
     <div class="space-y-3" id="faq"></div>
   </section>
 
-  <section class="bg-gradient-to-r from-brand/10 to-green-500/10 border border-border rounded-2xl p-6 text-center mb-12">
+  <section class="bg-gradient-to-r from-brand/10 to-amber-900/10 border border-border rounded-2xl p-6 text-center mb-12">
     <h2 class="text-xl font-black mb-2">Hemen <span class="text-brand">Basla!</span></h2>
     <p class="text-sm text-gray-400 mb-4">Uye ol, hos geldin bonusunu kap ve bahis heyecanina katil.</p>
     <a onclick="window.open(REGISTER)" class="cursor-pointer inline-block px-8 py-3 rounded-xl bg-brand text-black font-bold hover:bg-yellow-500 transition glow">Uye Ol</a>

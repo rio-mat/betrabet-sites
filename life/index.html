@@ -28,11 +28,11 @@
 <script src="config.js"></script>
 <script>
 tailwind.config = {
-  theme: { extend: { colors: { brand: '#3b82f6', dark: '#0f172a', card: '#1e293b', border: '#334155', accent: '#22d3ee' } } }
+  theme: { extend: { colors: { brand: '#d4af37', dark: '#0a0a0a', card: '#161616', border: '#262626', accent: '#c9a84c' } } }
 };
 </script>
 <style>
-body { background: #0f172a; font-family: 'Segoe UI', system-ui, sans-serif; }
+body { background: #0a0a0a; font-family: 'Segoe UI', system-ui, sans-serif; }
 </style>
 </head>
 <body class="text-gray-300 min-h-screen">
@@ -40,7 +40,7 @@ body { background: #0f172a; font-family: 'Segoe UI', system-ui, sans-serif; }
 <header class="bg-dark/95 backdrop-blur border-b border-border sticky top-0 z-50">
   <div class="max-w-4xl mx-auto flex items-center justify-between px-4 py-3">
     <a href="#" class="flex items-center gap-2">
-      <div class="w-8 h-8 rounded-lg bg-brand flex items-center justify-center font-black text-white text-sm">B</div>
+      <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand to-amber-600 flex items-center justify-center font-black text-black text-sm">B</div>
       <span class="font-bold"><span class="text-brand">Betraking</span> <span class="text-gray-500 text-sm">Inceleme</span></span>
     </a>
     <nav class="hidden md:flex gap-5 text-xs font-medium text-gray-400">
@@ -50,7 +50,7 @@ body { background: #0f172a; font-family: 'Segoe UI', system-ui, sans-serif; }
       <a href="#bonus" class="hover:text-brand transition">Bonus</a>
       <a href="#artieksi" class="hover:text-brand transition">Arti / Eksi</a>
     </nav>
-    <a onclick="window.open(REGISTER)" class="cursor-pointer px-4 py-1.5 rounded-lg bg-brand text-white text-xs font-bold hover:bg-blue-600 transition">Uye Ol</a>
+    <a onclick="window.open(REGISTER)" class="cursor-pointer px-4 py-1.5 rounded-lg bg-brand text-black text-xs font-bold hover:bg-amber-600 transition">Uye Ol</a>
   </div>
 </header>
 
@@ -88,7 +88,7 @@ body { background: #0f172a; font-family: 'Segoe UI', system-ui, sans-serif; }
 
     <div class="flex gap-3">
       <a onclick="window.open(LOGIN)" class="cursor-pointer px-6 py-2.5 rounded-lg border border-brand text-brand text-sm font-semibold hover:bg-brand/10 transition">Giris Yap</a>
-      <a onclick="window.open(REGISTER)" class="cursor-pointer px-6 py-2.5 rounded-lg bg-brand text-white text-sm font-bold hover:bg-blue-600 transition">Hemen Uye Ol</a>
+      <a onclick="window.open(REGISTER)" class="cursor-pointer px-6 py-2.5 rounded-lg bg-brand text-black text-sm font-bold hover:bg-amber-600 transition">Hemen Uye Ol</a>
     </div>
   </section>
 
@@ -251,7 +251,7 @@ body { background: #0f172a; font-family: 'Segoe UI', system-ui, sans-serif; }
     <p class="text-sm text-gray-400 mb-5">Hemen uye olun ve %100 hos geldin bonusunuzu alin.</p>
     <div class="flex justify-center gap-3">
       <a onclick="window.open(LOGIN)" class="cursor-pointer px-6 py-2.5 rounded-lg border border-brand text-brand text-sm font-semibold hover:bg-brand/10 transition">Giris Yap</a>
-      <a onclick="window.open(REGISTER)" class="cursor-pointer px-6 py-2.5 rounded-lg bg-brand text-white text-sm font-bold hover:bg-blue-600 transition">Uye Ol</a>
+      <a onclick="window.open(REGISTER)" class="cursor-pointer px-6 py-2.5 rounded-lg bg-brand text-black text-sm font-bold hover:bg-amber-600 transition">Uye Ol</a>
     </div>
   </section>
 
