@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"/><link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Betraking Spor - Canli Oranlar, Canli Bahis ve Mac Sonuclari</title>
+<meta name="description" content="Betraking canli spor bahisleri. En yuksek oranlar, canli mac takibi, anlik skor tablosu. 20+ spor dalinda 100.000+ mac."/>
+<meta name="keywords" content="betraking spor, betraking canli bahis, betraking oranlar, betraking mac sonuclari, betraking futbol"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://betraking.net/"/>
+<meta property="og:title" content="Betraking - Canli Oranlar ve Spor Bahisleri"/><meta property="og:description" content="En yuksek oranlar, canli bahis ve 20+ spor dalinda mac."/><meta property="og:url" content="https://betraking.net/"/><meta property="og:type" content="website"/><meta property="og:locale" content="tr_TR"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="config.js"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:'#d4af37',dark:'#060606',card:'#0e0e0e',card2:'#141414',border:'#1c1c1c',gold2:'#c9a84c',live:'#ef4444'}}}};</script>
+<style>
+body{background:#060606;font-family:'Segoe UI',system-ui,sans-serif}
+.glow{box-shadow:0 0 30px rgba(212,175,55,.3)}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.4}}
+.blink{animation:blink 1.5s ease-in-out infinite}
+.odds-btn:hover{background:#d4af37;color:#000;transform:scale(1.05)}
+.odds-btn{transition:all .2s}
+</style>
+</head>
+<body class="text-gray-200 min-h-screen flex flex-col">
+
+<header class="border-b border-border/50 bg-dark/90 backdrop-blur-xl sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+    <a href="#" class="flex items-center gap-2.5">
+      <img src="logo.svg" class="w-8 h-8 rounded-lg" alt="Betraking"/>
+      <span class="font-black text-lg tracking-tight"><span class="text-brand">BETRA</span><span class="text-white">KING</span></span>
+      <span class="text-[10px] px-2 py-0.5 rounded bg-live/20 text-live font-bold ml-1">SPOR</span>
+    </a>
+    <div class="flex gap-2">
+      <a onclick="window.open(LOGIN)" class="cursor-pointer px-4 py-2 rounded-lg border border-brand/40 text-brand text-xs font-semibold hover:bg-brand/10 transition">Giris</a>
+      <a onclick="window.open(REGISTER)" class="cursor-pointer px-4 py-2 rounded-lg bg-gradient-to-r from-brand to-gold2 text-black text-xs font-bold hover:opacity-90 transition glow">Uye Ol</a>
+    </div>
+  </div>
+</header>
+
+<!-- SPOR KATEGORILERI -->
+<div class="border-b border-border/30 bg-card/50">
+  <div class="max-w-6xl mx-auto px-4 flex gap-1 overflow-x-auto py-2 text-xs" id="sports">
+    <button class="px-3 py-1.5 rounded-lg bg-brand/10 text-brand font-bold border border-brand/20 whitespace-nowrap">&#9917; Futbol</button>
+    <button class="px-3 py-1.5 rounded-lg text-gray-500 hover:text-white transition whitespace-nowrap">&#127936; Basketbol</button>
+    <button class="px-3 py-1.5 rounded-lg text-gray-500 hover:text-white transition whitespace-nowrap">&#127934; Tenis</button>
+    <button class="px-3 py-1.5 rounded-lg text-gray-500 hover:text-white transition whitespace-nowrap">&#127952; Voleybol</button>
+    <button class="px-3 py-1.5 rounded-lg text-gray-500 hover:text-white transition whitespace-nowrap">&#127954; Buz Hokeyi</button>
+    <button class="px-3 py-1.5 rounded-lg text-gray-500 hover:text-white transition whitespace-nowrap">&#127951; Hentbol</button>
+    <button class="px-3 py-1.5 rounded-lg text-gray-500 hover:text-white transition whitespace-nowrap">&#127941; E-Spor</button>
+  </div>
+</div>
+
+<main class="flex-1">
+  <!-- CANLI MACLAR -->
+  <section class="py-8">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between mb-5">
+        <h1 class="text-xl md:text-2xl font-black flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-live blink"></span>
+          <span class="text-live">Canli</span> Maclar
+        </h1>
+        <span class="text-[11px] text-gray-500" id="matchCount">12 mac canli</span>
+      </div>
+      <div class="space-y-2" id="liveMatches"></div>
+    </div>
+  </section>
+
+  <!-- YARIN / POPULER -->
+  <section class="py-8 bg-card/30">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-lg font-black mb-5 flex items-center gap-2">&#128293; Populer <span class="text-brand">Maclar</span></h2>
+      <div class="space-y-2" id="popularMatches"></div>
+    </div>
+  </section>
+
+  <!-- NEDEN BETRAKING SPOR -->
+  <section class="py-14">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-2xl font-black text-center mb-10">Neden Betraking <span class="text-brand">Spor?</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-card border border-border rounded-2xl p-5 text-center">
+          <div class="text-3xl font-black text-brand mb-2">%97</div>
+          <div class="text-sm font-semibold text-white">Odeme Orani</div>
+          <div class="text-[11px] text-gray-500 mt-1">Sektordeki en yuksek</div>
+        </div>
+        <div class="bg-card border border-border rounded-2xl p-5 text-center">
+          <div class="text-3xl font-black text-brand mb-2">100K+</div>
+          <div class="text-sm font-semibold text-white">Aylik Mac</div>
+          <div class="text-[11px] text-gray-500 mt-1">20+ spor dalinda</div>
+        </div>
+        <div class="bg-card border border-border rounded-2xl p-5 text-center">
+          <div class="text-3xl font-black text-brand mb-2">Canli</div>
+          <div class="text-sm font-semibold text-white">Mac Izleme</div>
+          <div class="text-[11px] text-gray-500 mt-1">HD kalitede ucretsiz</div>
+        </div>
+        <div class="bg-card border border-border rounded-2xl p-5 text-center">
+          <div class="text-3xl font-black text-brand mb-2">5sn</div>
+          <div class="text-sm font-semibold text-white">Bahis Onay</div>
+          <div class="text-[11px] text-gray-500 mt-1">Aninda islem</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-14">
+    <div class="max-w-xl mx-auto px-4 text-center">
+      <h2 class="text-2xl font-black mb-3">Bahis Heyecanina <span class="text-brand">Katil</span></h2>
+      <p class="text-gray-400 text-sm mb-6">Uye ol, %200 spor bonusu kap ve en yuksek oranlarla bahis yap.</p>
+      <a onclick="window.open(REGISTER)" class="cursor-pointer inline-block px-10 py-4 rounded-xl bg-gradient-to-r from-brand to-gold2 text-black font-bold text-base hover:opacity-90 transition glow">Hemen Bahis Yap</a>
+    </div>
+  </section>
+</main>
+
+<footer class="border-t border-border py-6">
+  <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-3">
+    <span class="text-[11px] text-gray-600">&copy; 2024 Betraking. Tum haklari saklidir.</span>
+    <span class="text-[11px] text-gray-600">18+ Kumar bagimlilik yapabilir.</span>
+  </div>
+</footer>
+
+<script>
+const teams=[
+  {h:'Galatasaray',a:'Fenerbahce',l:'Super Lig'},{h:'Besiktas',a:'Trabzonspor',l:'Super Lig'},
+  {h:'Real Madrid',a:'Barcelona',l:'La Liga'},{h:'Man City',a:'Liverpool',l:'Premier League'},
+  {h:'Bayern',a:'Dortmund',l:'Bundesliga'},{h:'PSG',a:'Marseille',l:'Ligue 1'},
+  {h:'Inter',a:'Juventus',l:'Serie A'},{h:'Ajax',a:'PSV',l:'Eredivisie'},
+  {h:'Porto',a:'Benfica',l:'Liga Portugal'},{h:'Celtic',a:'Rangers',l:'Scottish Prem'},
+  {h:'Adana Demirspor',a:'Antalyaspor',l:'Super Lig'},{h:'Basaksehir',a:'Kasimpasa',l:'Super Lig'},
+  {h:'Arsenal',a:'Chelsea',l:'Premier League'},{h:'Atletico',a:'Sevilla',l:'La Liga'}
+];
+function rndOdd(){return(1+Math.random()*8).toFixed(2)}
+function rndScore(){return Math.floor(Math.random()*4)}
+function rndMin(){return Math.floor(Math.random()*90)+1}
+
+function matchCard(t,live){
+  const s1=rndScore(),s2=rndScore(),o1=rndOdd(),oX=rndOdd(),o2=rndOdd();
+  const min=rndMin();
+  return `<div class="bg-card border border-border rounded-xl p-4 hover:border-brand/30 transition cursor-pointer" onclick="window.open(REGISTER)">
+    <div class="flex items-center justify-between mb-3">
+      <span class="text-[10px] text-gray-500 font-semibold">${t.l}</span>
+      ${live?`<span class="flex items-center gap-1 text-[10px] text-live font-bold"><span class="w-1.5 h-1.5 rounded-full bg-live blink"></span>${min}'</span>`:`<span class="text-[10px] text-gray-600">Yarin 20:00</span>`}
+    </div>
+    <div class="flex items-center justify-between mb-3">
+      <div class="flex-1"><span class="text-sm font-semibold text-white">${t.h}</span></div>
+      ${live?`<div class="px-3 py-1 rounded-lg bg-card2 border border-border text-center min-w-[60px]"><span class="text-lg font-black text-white">${s1} - ${s2}</span></div>`:`<div class="px-3 py-1 text-center"><span class="text-xs text-gray-600">vs</span></div>`}
+      <div class="flex-1 text-right"><span class="text-sm font-semibold text-white">${t.a}</span></div>
+    </div>
+    <div class="grid grid-cols-3 gap-2">
+      <button class="odds-btn bg-card2 border border-border rounded-lg py-2 text-center"><span class="text-[10px] text-gray-500 block">1</span><span class="text-sm font-bold text-brand">${o1}</span></button>
+      <button class="odds-btn bg-card2 border border-border rounded-lg py-2 text-center"><span class="text-[10px] text-gray-500 block">X</span><span class="text-sm font-bold text-brand">${oX}</span></button>
+      <button class="odds-btn bg-card2 border border-border rounded-lg py-2 text-center"><span class="text-[10px] text-gray-500 block">2</span><span class="text-sm font-bold text-brand">${o2}</span></button>
+    </div>
+  </div>`;
+}
+
+const liveEl=document.getElementById('liveMatches');
+const popEl=document.getElementById('popularMatches');
+const shuffled=[...teams].sort(()=>Math.random()-.5);
+for(let i=0;i<6;i++)liveEl.innerHTML+=matchCard(shuffled[i],true);
+for(let i=6;i<12;i++)popEl.innerHTML+=matchCard(shuffled[i],false);
+
+// Update odds periodically
+setInterval(()=>{
+  document.querySelectorAll('.odds-btn span:last-child').forEach(s=>{
+    if(Math.random()>.7){
+      const v=(1+Math.random()*8).toFixed(2);
+      s.textContent=v;
+      s.classList.add('text-green-400');
+      setTimeout(()=>s.classList.remove('text-green-400'),1000);
+    }
+  });
+},4000);
+</script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"/><link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Betraking - Canli Kazananlar | Gercek Kazanclar, Gercek Oyuncular</title>
+<meta name="description" content="Betraking'de gercek oyuncular gercek kazanclar elde ediyor. Canli kazanan tablosu, kullanici yorumlari ve guncel giris bilgileri."/>
+<meta name="keywords" content="betraking kazananlar, betraking gercek kazanc, betraking canli, betraking yorumlar, betraking guvenilir"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://betraking.me/"/>
+<meta property="og:title" content="Betraking - Canli Kazananlar"/><meta property="og:description" content="Gercek oyuncular, gercek kazanclar. Betraking'de sen de kazan."/><meta property="og:url" content="https://betraking.me/"/><meta property="og:type" content="website"/><meta property="og:locale" content="tr_TR"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="config.js"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:'#d4af37',dark:'#080808',card:'#0f0f0f',card2:'#161616',border:'#1e1e1e',gold2:'#c9a84c'}}}};</script>
+<style>
+body{background:#080808;font-family:'Segoe UI',system-ui,sans-serif}
+.glow{box-shadow:0 0 30px rgba(212,175,55,.3)}
+@keyframes slide{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.ticker{animation:slide 30s linear infinite}
+.fade-in{animation:fadeIn .5s ease forwards}
+</style>
+</head>
+<body class="text-gray-200 min-h-screen flex flex-col">
+
+<header class="border-b border-border/50 bg-dark/90 backdrop-blur-xl sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+    <a href="#" class="flex items-center gap-2.5">
+      <img src="logo.svg" class="w-8 h-8 rounded-lg" alt="Betraking"/>
+      <span class="font-black text-lg tracking-tight"><span class="text-brand">BETRA</span><span class="text-white">KING</span></span>
+    </a>
+    <div class="flex gap-2">
+      <a onclick="window.open(LOGIN)" class="cursor-pointer px-4 py-2 rounded-lg border border-brand/40 text-brand text-xs font-semibold hover:bg-brand/10 transition">Giris</a>
+      <a onclick="window.open(REGISTER)" class="cursor-pointer px-4 py-2 rounded-lg bg-gradient-to-r from-brand to-gold2 text-black text-xs font-bold hover:opacity-90 transition glow">Uye Ol</a>
+    </div>
+  </div>
+</header>
+
+<!-- CANLI KAZANC TICKER -->
+<div class="bg-brand/5 border-b border-brand/10 overflow-hidden py-2">
+  <div class="ticker flex gap-8 whitespace-nowrap" id="ticker"></div>
+</div>
+
+<main class="flex-1">
+  <!-- HERO -->
+  <section class="py-14 md:py-20">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 text-[11px] font-bold mb-5">
+        <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+        <span id="onlineCount">2,847</span> KULLANICI ONLINE
+      </div>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-black leading-[1.1] mb-5">
+        <span class="text-white">Gercek Oyuncular,</span><br/>
+        <span class="bg-gradient-to-r from-brand via-amber-300 to-brand bg-clip-text text-transparent">Gercek Kazanclar</span>
+      </h1>
+      <p class="text-gray-400 text-sm md:text-base mb-8 max-w-lg mx-auto">Betraking'de her dakika yeni kazananlar. Sen de aramiza katil ve kazanmaya basla.</p>
+      <div class="flex justify-center gap-3">
+        <a onclick="window.open(REGISTER)" class="cursor-pointer px-8 py-3.5 rounded-xl bg-gradient-to-r from-brand to-gold2 text-black font-bold hover:opacity-90 transition glow">Hemen Katil</a>
+        <a onclick="window.open(LOGIN)" class="cursor-pointer px-8 py-3.5 rounded-xl border border-brand/30 text-brand font-semibold hover:bg-brand/10 transition">Giris Yap</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CANLI KAZANANLAR TABLOSU -->
+  <section class="py-14 bg-card/30">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-xl md:text-2xl font-black"><span class="text-brand">Canli</span> Kazananlar</h2>
+        <div class="flex items-center gap-2 text-xs text-green-400"><span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span> Canli</div>
+      </div>
+      <div class="bg-card border border-border rounded-2xl overflow-hidden">
+        <div class="grid grid-cols-4 gap-2 px-5 py-3 bg-card2 text-[11px] text-gray-500 font-bold uppercase">
+          <span>Oyuncu</span><span>Oyun</span><span>Kazanc</span><span>Zaman</span>
+        </div>
+        <div id="winners" class="divide-y divide-border/50 max-h-[400px] overflow-y-auto"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUGUN KAZANILAN -->
+  <section class="py-14">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="bg-gradient-to-r from-brand/10 via-card to-brand/10 border border-border rounded-2xl p-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div><div class="text-3xl font-black text-brand" id="todayTotal">1,247,832</div><div class="text-[11px] text-gray-500 mt-1">Bugun Kazanilan (TL)</div></div>
+        <div><div class="text-3xl font-black text-green-400" id="todayWinners">3,421</div><div class="text-[11px] text-gray-500 mt-1">Kazanan Oyuncu</div></div>
+        <div><div class="text-3xl font-black text-brand">15dk</div><div class="text-[11px] text-gray-500 mt-1">Ort. Cekim Suresi</div></div>
+        <div><div class="text-3xl font-black text-brand">3000+</div><div class="text-[11px] text-gray-500 mt-1">Oyun Secenegi</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KULLANICI YORUMLARI -->
+  <section class="py-14 bg-card/30">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-2xl font-black text-center mb-10">Oyuncu <span class="text-brand">Yorumlari</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="bg-card border border-border rounded-2xl p-5">
+          <div class="flex text-brand text-xs mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="text-sm text-gray-400 mb-4 leading-relaxed">"Ilk kez bu kadar hizli cekim yaptim. 12 dakikada Papara'ya dustu. Kesinlikle tavsiye ederim."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-brand to-gold2 flex items-center justify-center text-black text-xs font-bold">M</div>
+            <div><div class="text-xs font-semibold">Murat K.</div><div class="text-[10px] text-gray-600">Istanbul - 45,000 TL kazandi</div></div>
+          </div>
+        </div>
+        <div class="bg-card border border-border rounded-2xl p-5">
+          <div class="flex text-brand text-xs mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="text-sm text-gray-400 mb-4 leading-relaxed">"Canli casino kalitesi muhtesem. HD goruntu ve gercek krupiyerler. En iyi site budur."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-brand to-gold2 flex items-center justify-center text-black text-xs font-bold">S</div>
+            <div><div class="text-xs font-semibold">Selin A.</div><div class="text-[10px] text-gray-600">Ankara - 28,500 TL kazandi</div></div>
+          </div>
+        </div>
+        <div class="bg-card border border-border rounded-2xl p-5">
+          <div class="flex text-brand text-xs mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="text-sm text-gray-400 mb-4 leading-relaxed">"Spor bahislerinde oranlar cok iyi. Canli bahis yaparken hic takılma olmuyor. Super deneyim."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-brand to-gold2 flex items-center justify-center text-black text-xs font-bold">E</div>
+            <div><div class="text-xs font-semibold">Emre T.</div><div class="text-[10px] text-gray-600">Izmir - 67,200 TL kazandi</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16">
+    <div class="max-w-xl mx-auto px-4 text-center">
+      <h2 class="text-2xl md:text-3xl font-black mb-3">Siradaki Kazanan <span class="text-brand">Sen Ol</span></h2>
+      <p class="text-gray-400 text-sm mb-7">Hemen uye ol, %200 hos geldin bonusunu kap ve kazanmaya basla.</p>
+      <a onclick="window.open(REGISTER)" class="cursor-pointer inline-block px-10 py-4 rounded-xl bg-gradient-to-r from-brand to-gold2 text-black font-bold text-base hover:opacity-90 transition glow">Uye Ol ve Kazan</a>
+    </div>
+  </section>
+</main>
+
+<footer class="border-t border-border py-6">
+  <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-3">
+    <span class="text-[11px] text-gray-600">&copy; 2024 Betraking. Tum haklari saklidir.</span>
+    <span class="text-[11px] text-gray-600">18+ Kumar bagimlilik yapabilir.</span>
+  </div>
+</footer>
+
+<script>
+const names=['Ahmet','Mehmet','Ayse','Fatma','Ali','Emre','Selin','Burak','Deniz','Cem','Hakan','Elif','Oya','Kerem','Berk','Zeynep','Tugba','Onur','Gizem','Volkan'];
+const games=['Sweet Bonanza','Gates of Olympus','Big Bass Splash','Aviator','Rulet','Blackjack','Canli Bahis','Poker','Book of Dead','Sugar Rush','Crazy Time','Lightning Rulet'];
+const cities=['Istanbul','Ankara','Izmir','Bursa','Antalya','Konya','Adana','Gaziantep','Mersin','Trabzon'];
+function rnd(a){return a[Math.floor(Math.random()*a.length)]}
+function rndAmt(){return(Math.floor(Math.random()*99000)+1000).toLocaleString('tr-TR')}
+function rndTime(){return Math.floor(Math.random()*59)+1+'dk once'}
+function makeWinner(){return{name:rnd(names)+' '+String.fromCharCode(65+Math.floor(Math.random()*26))+'.',game:rnd(games),amount:rndAmt()+' TL',time:rndTime(),city:rnd(cities)}}
+
+// Ticker
+const tk=document.getElementById('ticker');
+let tickerHTML='';
+for(let i=0;i<20;i++){const w=makeWinner();tickerHTML+=`<span class="flex items-center gap-2 text-xs"><span class="text-brand font-bold">${w.name}</span><span class="text-gray-500">${w.game}'da</span><span class="text-green-400 font-bold">${w.amount}</span> kazandi</span>`;}
+tk.innerHTML=tickerHTML+tickerHTML;
+
+// Winners table
+const wEl=document.getElementById('winners');
+function addWinner(animate){
+  const w=makeWinner();
+  const div=document.createElement('div');
+  div.className='grid grid-cols-4 gap-2 px-5 py-3 text-xs'+(animate?' fade-in':'');
+  div.innerHTML=`<span class="flex items-center gap-2"><span class="w-6 h-6 rounded-full bg-brand/20 flex items-center justify-center text-brand text-[10px] font-bold">${w.name[0]}</span><span class="font-semibold text-white">${w.name}</span></span><span class="text-gray-400 flex items-center">${w.game}</span><span class="text-green-400 font-bold flex items-center">${w.amount}</span><span class="text-gray-500 flex items-center">${w.time}</span>`;
+  wEl.insertBefore(div,wEl.firstChild);
+  if(wEl.children.length>30)wEl.removeChild(wEl.lastChild);
+}
+for(let i=0;i<15;i++)addWinner(false);
+setInterval(()=>addWinner(true),3000);
+
+// Online count
+setInterval(()=>{
+  const c=2800+Math.floor(Math.random()*200);
+  document.getElementById('onlineCount').textContent=c.toLocaleString('tr-TR');
+},5000);
+</script>
+</body>
+</html>

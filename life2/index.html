@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"/><link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Betraking - Sansini Dene | Hos Geldin Bonusu Kazan</title>
+<meta name="description" content="Betraking sans carki ile hos geldin bonusunu kazan. %200'e varan bonus, bedava freespin ve ozel promosyonlar seni bekliyor."/>
+<meta name="keywords" content="betraking bonus, betraking sans carki, betraking freespin, betraking hos geldin, betraking promosyon"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://betraking.life/"/>
+<meta property="og:title" content="Betraking - Sans Carkini Cevir, Bonusunu Kazan!"/>
+<meta property="og:description" content="Betraking sans carki ile %200'e varan hos geldin bonusu kazan."/>
+<meta property="og:url" content="https://betraking.life/"/>
+<meta property="og:type" content="website"/><meta property="og:locale" content="tr_TR"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="config.js"></script>
+<script>
+tailwind.config={theme:{extend:{colors:{brand:'#d4af37',dark:'#080808',card:'#111111',border:'#1e1e1e',gold2:'#c9a84c',gold3:'#b8942e'}}}};
+</script>
+<style>
+body{background:#080808;font-family:'Segoe UI',system-ui,sans-serif}
+.glow{box-shadow:0 0 30px rgba(212,175,55,.35)}
+.glow-soft{box-shadow:0 0 60px rgba(212,175,55,.1)}
+@keyframes spin-wheel{0%{transform:rotate(0)}100%{transform:rotate(1800deg)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes pulse-gold{0%,100%{opacity:.6}50%{opacity:1}}
+.spin-anim{animation:spin-wheel 4s cubic-bezier(.17,.67,.12,.99) forwards}
+.float{animation:float 3s ease-in-out infinite}
+.pulse-g{animation:pulse-gold 2s ease-in-out infinite}
+.wheel-segment{transition:all .3s}
+</style>
+</head>
+<body class="text-gray-200 min-h-screen flex flex-col">
+
+<header class="border-b border-border/50 bg-dark/90 backdrop-blur-xl sticky top-0 z-50">
+  <div class="max-w-5xl mx-auto flex items-center justify-between px-4 py-3">
+    <a href="#" class="flex items-center gap-2.5">
+      <img src="logo.svg" class="w-8 h-8 rounded-lg" alt="Betraking"/>
+      <span class="font-black text-lg tracking-tight"><span class="text-brand">BETRA</span><span class="text-white">KING</span></span>
+    </a>
+    <div class="flex gap-2">
+      <a onclick="window.open(LOGIN)" class="cursor-pointer px-4 py-2 rounded-lg border border-brand/40 text-brand text-xs font-semibold hover:bg-brand/10 transition">Giris Yap</a>
+      <a onclick="window.open(REGISTER)" class="cursor-pointer px-4 py-2 rounded-lg bg-gradient-to-r from-brand to-gold2 text-black text-xs font-bold hover:opacity-90 transition glow">Uye Ol</a>
+    </div>
+  </div>
+</header>
+
+<main class="flex-1">
+  <!-- HERO: SANS CARKI -->
+  <section class="relative py-12 md:py-20 overflow-hidden">
+    <div class="absolute inset-0"><div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand/5 rounded-full blur-[150px]"></div></div>
+    <div class="relative max-w-5xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="text-center md:text-left">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 border border-brand/20 text-brand text-[11px] font-bold mb-5 pulse-g">
+            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            OZEL FIRSAT - SINIRLI SURE
+          </div>
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-black leading-[1.1] mb-5">
+            <span class="text-white">Carki Cevir,</span><br/>
+            <span class="bg-gradient-to-r from-brand via-amber-300 to-brand bg-clip-text text-transparent">Bonusunu Kazan!</span>
+          </h1>
+          <p class="text-gray-400 text-sm md:text-base mb-7 max-w-md mx-auto md:mx-0 leading-relaxed">
+            Betraking'e ozel sans carki ile %200'e varan hos geldin bonusu, bedava freespin ve surpriz oduller kazanin.
+          </p>
+          <a onclick="spinWheel()" id="spinBtn" class="cursor-pointer inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-gradient-to-r from-brand to-gold2 text-black font-bold text-sm hover:opacity-90 transition glow">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+            CARKI CEVIR
+          </a>
+        </div>
+        <div class="flex justify-center">
+          <div class="relative w-72 h-72 md:w-80 md:h-80 float">
+            <svg id="wheel" viewBox="0 0 300 300" class="w-full h-full drop-shadow-2xl">
+              <circle cx="150" cy="150" r="145" fill="#111" stroke="#d4af37" stroke-width="3"/>
+              <g id="segments"></g>
+              <circle cx="150" cy="150" r="30" fill="#d4af37"/>
+              <text x="150" y="156" text-anchor="middle" fill="#000" font-size="14" font-weight="900">SPIN</text>
+            </svg>
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-2 w-0 h-0 border-l-[12px] border-r-[12px] border-t-[20px] border-l-transparent border-r-transparent border-t-brand z-10"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SONUC MODAL -->
+  <div id="modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm">
+    <div class="bg-card border border-brand/30 rounded-2xl p-8 max-w-sm mx-4 text-center glow-soft">
+      <div class="text-5xl mb-3">&#127881;</div>
+      <h2 class="text-2xl font-black text-white mb-2">Tebrikler!</h2>
+      <p class="text-brand text-xl font-bold mb-1" id="prize"></p>
+      <p class="text-gray-400 text-sm mb-6">Bonusunu almak icin hemen uye ol!</p>
+      <a onclick="window.open(REGISTER)" class="cursor-pointer block w-full py-3 rounded-xl bg-gradient-to-r from-brand to-gold2 text-black font-bold hover:opacity-90 transition glow">BONUSU AL</a>
+      <button onclick="document.getElementById('modal').classList.add('hidden');document.getElementById('modal').classList.remove('flex')" class="mt-3 text-xs text-gray-500 hover:text-gray-300 transition">Kapat</button>
+    </div>
+  </div>
+
+  <!-- BONUSLAR -->
+  <section class="py-14 md:py-20">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-black text-center mb-3"><span class="text-brand">Ozel</span> Bonuslar</h2>
+      <p class="text-gray-500 text-sm text-center mb-10 max-w-md mx-auto">Betraking'e katil, avantajli bonuslardan hemen faydalan.</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-card border border-border rounded-2xl p-5 text-center hover:border-brand/40 transition group">
+          <div class="w-12 h-12 mx-auto rounded-xl bg-brand/10 flex items-center justify-center text-brand text-xl mb-3 group-hover:scale-110 transition">&#127873;</div>
+          <div class="text-2xl font-black text-brand mb-1">%200</div>
+          <div class="text-sm font-semibold text-white">Hos Geldin Bonusu</div>
+          <div class="text-[11px] text-gray-500 mt-1">Ilk yatirimda</div>
+        </div>
+        <div class="bg-card border border-border rounded-2xl p-5 text-center hover:border-brand/40 transition group">
+          <div class="w-12 h-12 mx-auto rounded-xl bg-brand/10 flex items-center justify-center text-brand text-xl mb-3 group-hover:scale-110 transition">&#127920;</div>
+          <div class="text-2xl font-black text-brand mb-1">500</div>
+          <div class="text-sm font-semibold text-white">Bedava Freespin</div>
+          <div class="text-[11px] text-gray-500 mt-1">Secili slotlarda</div>
+        </div>
+        <div class="bg-card border border-border rounded-2xl p-5 text-center hover:border-brand/40 transition group">
+          <div class="w-12 h-12 mx-auto rounded-xl bg-brand/10 flex items-center justify-center text-brand text-xl mb-3 group-hover:scale-110 transition">&#128176;</div>
+          <div class="text-2xl font-black text-brand mb-1">%15</div>
+          <div class="text-sm font-semibold text-white">Kayip Bonusu</div>
+          <div class="text-[11px] text-gray-500 mt-1">Her hafta</div>
+        </div>
+        <div class="bg-card border border-border rounded-2xl p-5 text-center hover:border-brand/40 transition group">
+          <div class="w-12 h-12 mx-auto rounded-xl bg-brand/10 flex items-center justify-center text-brand text-xl mb-3 group-hover:scale-110 transition">&#129351;</div>
+          <div class="text-2xl font-black text-brand mb-1">VIP</div>
+          <div class="text-sm font-semibold text-white">Ozel Promosyonlar</div>
+          <div class="text-[11px] text-gray-500 mt-1">Sadik uyeler icin</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEDEN BETRAKING -->
+  <section class="py-14 md:py-20 bg-card/30">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-black text-center mb-10">Neden <span class="text-brand">Betraking?</span></h2>
+      <div class="grid sm:grid-cols-3 gap-5">
+        <div class="bg-card border border-border rounded-2xl p-6 hover:border-brand/30 transition">
+          <div class="text-brand text-2xl mb-3">&#128274;</div>
+          <h3 class="font-bold text-white mb-2">Guvenli Alt Yapi</h3>
+          <p class="text-xs text-gray-500 leading-relaxed">256-bit SSL sifreleme, Curacao lisansi ve bagimsiz denetim ile tam guvenlik.</p>
+        </div>
+        <div class="bg-card border border-border rounded-2xl p-6 hover:border-brand/30 transition">
+          <div class="text-brand text-2xl mb-3">&#9889;</div>
+          <h3 class="font-bold text-white mb-2">Hizli Islemler</h3>
+          <p class="text-xs text-gray-500 leading-relaxed">Yatirim ve cekim islemleri dakikalar icinde. Papara, kripto, havale destegi.</p>
+        </div>
+        <div class="bg-card border border-border rounded-2xl p-6 hover:border-brand/30 transition">
+          <div class="text-brand text-2xl mb-3">&#127775;</div>
+          <h3 class="font-bold text-white mb-2">Premium Deneyim</h3>
+          <p class="text-xs text-gray-500 leading-relaxed">3000+ oyun, canli casino, spor bahisleri ve 7/24 VIP destek.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ISTATISTIKLER -->
+  <section class="py-14">
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="bg-gradient-to-r from-brand/5 via-card to-brand/5 border border-border rounded-2xl p-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div><div class="text-3xl font-black text-brand">50K+</div><div class="text-xs text-gray-500 mt-1">Aktif Uye</div></div>
+        <div><div class="text-3xl font-black text-brand">3000+</div><div class="text-xs text-gray-500 mt-1">Oyun</div></div>
+        <div><div class="text-3xl font-black text-brand">15dk</div><div class="text-xs text-gray-500 mt-1">Ort. Cekim</div></div>
+        <div><div class="text-3xl font-black text-brand">7/24</div><div class="text-xs text-gray-500 mt-1">Canli Destek</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-14">
+    <div class="max-w-2xl mx-auto px-4 text-center">
+      <h2 class="text-2xl md:text-3xl font-black mb-3">Hemen <span class="text-brand">Basla</span></h2>
+      <p class="text-gray-400 text-sm mb-6">Uye ol, carkini cevir ve bonusunu kap!</p>
+      <a onclick="window.open(REGISTER)" class="cursor-pointer inline-block px-10 py-4 rounded-xl bg-gradient-to-r from-brand to-gold2 text-black font-bold text-base hover:opacity-90 transition glow">Hemen Uye Ol</a>
+    </div>
+  </section>
+</main>
+
+<footer class="border-t border-border py-6">
+  <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-3">
+    <span class="text-[11px] text-gray-600">&copy; 2024 Betraking. Tum haklari saklidir.</span>
+    <span class="text-[11px] text-gray-600">18+ Kumar bagimlilik yapabilir. Sorumlu oynama.</span>
+  </div>
+</footer>
+
+<script>
+const prizes=['%200 Bonus','100 Freespin','%150 Bonus','50 Freespin','%100 Bonus','200 Freespin','%50 Bonus','VIP Bonus'];
+const colors=['#d4af37','#1a1a1a','#c9a84c','#1a1a1a','#b8942e','#1a1a1a','#d4af37','#1a1a1a'];
+const seg=document.getElementById('segments');
+prizes.forEach((p,i)=>{
+  const angle=i*45;const rad=(angle+22.5)*Math.PI/180;
+  const x1=150+120*Math.cos(angle*Math.PI/180),y1=150+120*Math.sin(angle*Math.PI/180);
+  const x2=150+120*Math.cos((angle+45)*Math.PI/180),y2=150+120*Math.sin((angle+45)*Math.PI/180);
+  const tx=150+80*Math.cos(rad),ty=150+80*Math.sin(rad);
+  seg.innerHTML+=`<path d="M150,150 L${x1},${y1} A120,120 0 0,1 ${x2},${y2} Z" fill="${colors[i]}" stroke="#222" stroke-width="1"/>
+  <text x="${tx}" y="${ty}" text-anchor="middle" fill="${i%2?'#d4af37':'#000'}" font-size="9" font-weight="700" transform="rotate(${angle+22.5},${tx},${ty})">${p}</text>`;
+});
+let spinning=false;
+function spinWheel(){
+  if(spinning)return;spinning=true;
+  const w=document.getElementById('wheel');
+  const idx=Math.floor(Math.random()*prizes.length);
+  const deg=1800+360-idx*45-Math.random()*40;
+  w.style.transition='transform 4s cubic-bezier(.17,.67,.12,.99)';
+  w.style.transform=`rotate(${deg}deg)`;
+  document.getElementById('spinBtn').style.opacity='0.5';
+  setTimeout(()=>{
+    document.getElementById('prize').textContent=prizes[idx]+' Kazandiniz!';
+    const m=document.getElementById('modal');m.classList.remove('hidden');m.classList.add('flex');
+    spinning=false;document.getElementById('spinBtn').style.opacity='1';
+  },4200);
+}
+</script>
+</body>
+</html>

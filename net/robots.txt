@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://betraking.net/sitemap.xml

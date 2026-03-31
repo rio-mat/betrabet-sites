@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"/><link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Betraking VIP - Exclusive Uyelik | Ozel Bonuslar ve Ayricaliklar</title>
+<meta name="description" content="Betraking VIP uyelik ile ozel bonuslar, kisisel hesap yoneticisi, oncelikli cekim ve exclusive promosyonlar. Sinirli kontenjan."/>
+<meta name="keywords" content="betraking vip, betraking exclusive, betraking ozel bonus, betraking premium, betraking kontenjan"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://betraking.xyz/"/>
+<meta property="og:title" content="Betraking VIP - Exclusive Uyelik"/><meta property="og:description" content="Sinirli kontenjan! VIP uyelik ile ozel bonuslar ve ayricaliklar."/><meta property="og:url" content="https://betraking.xyz/"/><meta property="og:type" content="website"/><meta property="og:locale" content="tr_TR"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="config.js"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:'#d4af37',dark:'#050505',card:'#0c0c0c',card2:'#141414',border:'#1a1a1a',gold2:'#c9a84c',gold3:'#b8942e'}}}};</script>
+<style>
+body{background:#050505;font-family:'Segoe UI',system-ui,sans-serif}
+.glow{box-shadow:0 0 40px rgba(212,175,55,.3)}
+.glow-soft{box-shadow:0 0 80px rgba(212,175,55,.08)}
+@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+.shimmer{background:linear-gradient(90deg,transparent,rgba(212,175,55,.08),transparent);background-size:200% 100%;animation:shimmer 3s infinite}
+@keyframes count{from{opacity:0;transform:scale(.8)}to{opacity:1;transform:scale(1)}}
+.count-anim{animation:count .5s ease}
+</style>
+</head>
+<body class="text-gray-200 min-h-screen flex flex-col">
+
+<header class="border-b border-brand/10 bg-dark/90 backdrop-blur-xl sticky top-0 z-50">
+  <div class="max-w-5xl mx-auto flex items-center justify-between px-4 py-3">
+    <a href="#" class="flex items-center gap-2.5">
+      <img src="logo.svg" class="w-8 h-8 rounded-lg" alt="Betraking"/>
+      <span class="font-black text-lg tracking-tight"><span class="text-brand">BETRA</span><span class="text-white">KING</span></span>
+      <span class="text-[9px] px-2 py-0.5 rounded bg-gradient-to-r from-brand to-gold2 text-black font-black ml-1">VIP</span>
+    </a>
+    <a onclick="window.open(REGISTER)" class="cursor-pointer px-5 py-2 rounded-lg bg-gradient-to-r from-brand to-gold2 text-black text-xs font-bold hover:opacity-90 transition glow">VIP Uye Ol</a>
+  </div>
+</header>
+
+<main class="flex-1">
+  <!-- HERO -->
+  <section class="relative py-16 md:py-28 overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand/3 rounded-full blur-[200px]"></div>
+      <div class="shimmer absolute inset-0"></div>
+    </div>
+    <div class="relative max-w-3xl mx-auto px-4 text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand/10 border border-brand/20 text-brand text-[11px] font-bold mb-6">
+        &#128081; SINIRLI KONTENJAN
+      </div>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-black leading-[1.05] mb-6">
+        <span class="bg-gradient-to-b from-white to-gray-400 bg-clip-text text-transparent">Exclusive</span><br/>
+        <span class="bg-gradient-to-r from-brand via-amber-200 to-brand bg-clip-text text-transparent">VIP Uyelik</span>
+      </h1>
+      <p class="text-gray-400 text-sm md:text-base mb-8 max-w-lg mx-auto leading-relaxed">
+        Betraking VIP programi ile siradan olmanin otesine gec. Ozel bonuslar, kisisel hesap yoneticisi ve oncelikli islemler seni bekliyor.
+      </p>
+
+      <!-- COUNTDOWN -->
+      <div class="inline-flex items-center gap-1 bg-card border border-border rounded-2xl p-1 mb-8">
+        <div class="bg-card2 rounded-xl px-4 py-3 text-center min-w-[70px]">
+          <div class="text-2xl font-black text-brand count-anim" id="hours">23</div>
+          <div class="text-[9px] text-gray-600 uppercase">Saat</div>
+        </div>
+        <span class="text-brand font-bold">:</span>
+        <div class="bg-card2 rounded-xl px-4 py-3 text-center min-w-[70px]">
+          <div class="text-2xl font-black text-brand count-anim" id="minutes">47</div>
+          <div class="text-[9px] text-gray-600 uppercase">Dakika</div>
+        </div>
+        <span class="text-brand font-bold">:</span>
+        <div class="bg-card2 rounded-xl px-4 py-3 text-center min-w-[70px]">
+          <div class="text-2xl font-black text-brand count-anim" id="seconds">12</div>
+          <div class="text-[9px] text-gray-600 uppercase">Saniye</div>
+        </div>
+      </div>
+      <div class="text-[11px] text-gray-500 mb-8">VIP kontenjan kapanmasina kalan sure</div>
+
+      <a onclick="window.open(REGISTER)" class="cursor-pointer inline-block px-10 py-4 rounded-xl bg-gradient-to-r from-brand to-gold2 text-black font-bold text-base hover:opacity-90 transition glow">VIP Uyeligi Baslat</a>
+      <div class="mt-4 text-[11px] text-gray-600">Kalan kontenjan: <span class="text-brand font-bold" id="slots">17</span> / 100</div>
+    </div>
+  </section>
+
+  <!-- VIP KATMANLARI -->
+  <section class="py-14">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-2xl font-black text-center mb-3">VIP <span class="text-brand">Katmanlari</span></h2>
+      <p class="text-gray-500 text-sm text-center mb-10">Seviyeni yukselttikce ayricaliklar artar</p>
+      <div class="grid sm:grid-cols-3 gap-4">
+        <!-- GOLD -->
+        <div class="bg-card border border-border rounded-2xl p-6 hover:border-brand/30 transition relative overflow-hidden">
+          <div class="text-brand text-2xl mb-3">&#129351;</div>
+          <h3 class="font-black text-white text-lg mb-1">Gold</h3>
+          <div class="text-[11px] text-gray-500 mb-4">Giris seviyesi</div>
+          <ul class="space-y-2 text-xs text-gray-400">
+            <li class="flex items-center gap-2"><span class="text-brand">&#10003;</span> %200 Hos Geldin Bonusu</li>
+            <li class="flex items-center gap-2"><span class="text-brand">&#10003;</span> Haftalik %10 Kayip Bonusu</li>
+            <li class="flex items-center gap-2"><span class="text-brand">&#10003;</span> 7/24 Canli Destek</li>
+            <li class="flex items-center gap-2"><span class="text-brand">&#10003;</span> 200 Bedava Freespin</li>
+          </ul>
+          <a onclick="window.open(REGISTER)" class="cursor-pointer block w-full mt-5 py-2.5 rounded-xl border border-brand/30 text-brand text-xs font-bold text-center hover:bg-brand/10 transition">Sec</a>
+        </div>
+        <!-- PLATINUM -->
+        <div class="bg-card border-2 border-brand rounded-2xl p-6 relative overflow-hidden glow-soft">
+          <div class="absolute top-3 right-3 px-2 py-0.5 rounded-full bg-brand text-black text-[9px] font-black">POPULER</div>
+          <div class="text-brand text-2xl mb-3">&#128142;</div>
+          <h3 class="font-black text-white text-lg mb-1">Platinum</h3>
+          <div class="text-[11px] text-brand mb-4">En cok tercih edilen</div>
+          <ul class="space-y-2 text-xs text-gray-400">
+            <li class="flex items-center gap-2"><span class="text-brand">&#10003;</span> %300 Hos Geldin Bonusu</li>
+            <li class="flex items-center gap-2"><span class="text-brand">&#10003;</span> Haftalik %15 Kayip Bonusu</li>
+            <li class="flex items-center gap-2"><span class="text-brand">&#10003;</span> Kisisel Hesap Yoneticisi</li>
+            <li class="flex items-center gap-2"><span class="text-brand">&#10003;</span> 500 Bedava Freespin</li>
+            <li class="flex items-center gap-2"><span class="text-brand">&#10003;</span> Oncelikli Cekim (5dk)</li>
+          </ul>
+          <a onclick="window.open(REGISTER)" class="cursor-pointer block w-full mt-5 py-2.5 rounded-xl bg-gradient-to-r from-brand to-gold2 text-black text-xs font-bold text-center hover:opacity-90 transition">Sec</a>
+        </div>
+        <!-- DIAMOND -->
+        <div class="bg-card border border-border rounded-2xl p-6 hover:border-brand/30 transition relative overflow-hidden">
+          <div class="text-brand text-2xl mb-3">&#128167;</div>
+          <h3 class="font-black text-white text-lg mb-1">Diamond</h3>
+          <div class="text-[11px] text-gray-500 mb-4">Ultra premium</div>
+          <ul class="space-y-2 text-xs text-gray-400">
+            <li class="flex items-center gap-2"><span class="text-brand">&#10003;</span> %500 Hos Geldin Bonusu</li>
+            <li class="flex items-center gap-2"><span class="text-brand">&#10003;</span> Haftalik %20 Kayip Bonusu</li>
+            <li class="flex items-center gap-2"><span class="text-brand">&#10003;</span> 7/24 Ozel VIP Destek</li>
+            <li class="flex items-center gap-2"><span class="text-brand">&#10003;</span> 1000 Bedava Freespin</li>
+            <li class="flex items-center gap-2"><span class="text-brand">&#10003;</span> Aninda Cekim (2dk)</li>
+            <li class="flex items-center gap-2"><span class="text-brand">&#10003;</span> Exclusive Turnuvalar</li>
+          </ul>
+          <a onclick="window.open(REGISTER)" class="cursor-pointer block w-full mt-5 py-2.5 rounded-xl border border-brand/30 text-brand text-xs font-bold text-center hover:bg-brand/10 transition">Sec</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIP AVANTAJLAR -->
+  <section class="py-14 bg-card/30">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-2xl font-black text-center mb-10">VIP <span class="text-brand">Avantajlari</span></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-card border border-border rounded-xl p-5 text-center"><div class="text-2xl mb-2">&#128176;</div><h3 class="text-sm font-bold text-white mb-1">Yuksek Limitler</h3><p class="text-[11px] text-gray-500">Standart limitlerin 10 katina kadar</p></div>
+        <div class="bg-card border border-border rounded-xl p-5 text-center"><div class="text-2xl mb-2">&#9889;</div><h3 class="text-sm font-bold text-white mb-1">Aninda Cekim</h3><p class="text-[11px] text-gray-500">VIP uyeler icin 2-5 dakika</p></div>
+        <div class="bg-card border border-border rounded-xl p-5 text-center"><div class="text-2xl mb-2">&#127873;</div><h3 class="text-sm font-bold text-white mb-1">Dogum Gunu Bonusu</h3><p class="text-[11px] text-gray-500">Ozel gunlerde surpriz bonus</p></div>
+        <div class="bg-card border border-border rounded-xl p-5 text-center"><div class="text-2xl mb-2">&#128081;</div><h3 class="text-sm font-bold text-white mb-1">Exclusive Etkinlik</h3><p class="text-[11px] text-gray-500">Sadece VIP uyeler icin turnuvalar</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUVEN -->
+  <section class="py-14">
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="bg-gradient-to-r from-brand/5 via-card to-brand/5 border border-border rounded-2xl p-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div><div class="text-2xl font-black text-brand">256-bit</div><div class="text-[11px] text-gray-500 mt-1">SSL Sifreleme</div></div>
+        <div><div class="text-2xl font-black text-brand">Curacao</div><div class="text-[11px] text-gray-500 mt-1">Lisansli</div></div>
+        <div><div class="text-2xl font-black text-brand">50K+</div><div class="text-[11px] text-gray-500 mt-1">VIP Uye</div></div>
+        <div><div class="text-2xl font-black text-brand">7/24</div><div class="text-[11px] text-gray-500 mt-1">VIP Destek</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="py-16">
+    <div class="max-w-xl mx-auto px-4 text-center">
+      <h2 class="text-2xl md:text-3xl font-black mb-3">Exclusive <span class="text-brand">Kulube Katil</span></h2>
+      <p class="text-gray-400 text-sm mb-2">Kontenjan dolmadan VIP uyeligini baslat.</p>
+      <p class="text-[11px] text-brand font-bold mb-6">Kalan: <span id="slots2">17</span> / 100 kontenjan</p>
+      <a onclick="window.open(REGISTER)" class="cursor-pointer inline-block px-10 py-4 rounded-xl bg-gradient-to-r from-brand to-gold2 text-black font-bold text-base hover:opacity-90 transition glow">VIP Uye Ol</a>
+    </div>
+  </section>
+</main>
+
+<footer class="border-t border-border py-6">
+  <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-3">
+    <span class="text-[11px] text-gray-600">&copy; 2024 Betraking. Tum haklari saklidir.</span>
+    <span class="text-[11px] text-gray-600">18+ Kumar bagimlilik yapabilir.</span>
+  </div>
+</footer>
+
+<script>
+// Countdown timer - resets every 24h
+function updateCountdown(){
+  const now=new Date();
+  const end=new Date(now);
+  end.setHours(23,59,59,999);
+  const diff=end-now;
+  const h=Math.floor(diff/3600000);
+  const m=Math.floor((diff%3600000)/60000);
+  const s=Math.floor((diff%60000)/1000);
+  document.getElementById('hours').textContent=String(h).padStart(2,'0');
+  document.getElementById('minutes').textContent=String(m).padStart(2,'0');
+  document.getElementById('seconds').textContent=String(s).padStart(2,'0');
+}
+updateCountdown();
+setInterval(updateCountdown,1000);
+
+// Slots decreasing
+let slots=17;
+setInterval(()=>{
+  if(Math.random()>.85&&slots>3){slots--;document.getElementById('slots').textContent=slots;document.getElementById('slots2').textContent=slots;}
+},15000);
+</script>
+</body>
+</html>

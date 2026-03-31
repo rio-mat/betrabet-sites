@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://betraking.life/sitemap.xml
