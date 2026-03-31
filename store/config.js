@@ -3,7 +3,7 @@
 // Domain degistirmek icin asagidaki "domain" degerini guncelleyin.
 
 const SITE_CONFIG = {
-  domain: "https://betraking.com",
+  domain: "https://betraking366.com",
 
   get login()    { return `${this.domain}/login`; },
   get register() { return `${this.domain}/register`; },
